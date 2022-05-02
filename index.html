@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<!--html이 만들어지기 전 첫 부분에 사용-->
+
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Page</title>
+<!--스타일시트 하나 꼼수용"목차 이동을 보여주기 위함"-->
+<!--div, block(class=.), title/bold(id=#)-->
+    <style>
+        div{
+            padding: 50px;
+        }
+        #block{
+            background-color: aquamarine;
+        }
+        .title{
+            color:blue
+        }
+        .bold{
+            font-weight:bold;
+            font-size: 20px;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+
+<body>
+<!--본문영역/실제로 화면에 보여지는 영역-->
+
+<!--제목태그:웹 브라우저와 검색엔진에서도 제목태그는 중요함!-->
+    <h1>h1 tag</h1>
+    <h2>h2 tag</h2>
+    <h3>h3 tag</h3>
+    <h4>h4 tag</h4>
+    <h5>h5 tag</h5>
+    <h6>h6 tag</h6>
+
+<!--문단태그와 블록태그-->
+<!--p태그는 블록태그이지만 인라인태그는 내부 중첩이 허용된다?-->
+<!--b는 볼드, strong도 볼드이나, b는 별 의미가 없지만 strong은 중요하다는 의미 부여-->
+<!--i, em은 기울임-->
+<!--ins는 밑줄, del은 취소선-->
+<!--q태그는 짧은 인용문, blockquote는 긴 인용문. 보기에도 차이가 존재함-->
+    <p>하이퍼 텍스트 마크업 언어<br>(영어: Hyper Text Markup Language, HTML, 문화어: 초본문표식달기언어, 하이퍼본문표식달기언어)는 웹 페이지를 위한 지배적인 마크업 언어다.<br>또한, HTML은 제목, 단락, 목록 등과 같은 본문을 위한 구조적 의미를 나타내는 것뿐만 아니라 <b>링크, 인용</b>과 그 밖의 항목으로 구조적 문서를 만들 수 있는 방법을 제공한다. 그리고 이미지와 객체를 내장하고 <strong>대화형 양식</strong>을 생성하는 데 사용될 수 있다. HTML은 웹 페이지 콘텐츠 안의 꺾쇠 괄호에 둘러싸인 <em>"태그"</em>로 되어있는 HTML 요소 형태로 작성한다. <q>HTML은 웹 브라우저와 같은 HTML 처리 장치의 행동에 영향을 주는 자바스크립트와</q><blockquote>본문과 그 밖의 항목의 외관과 배치를 정의하는 CSS 같은 스크립트를 포함하거나 불러올 수 있다. HTML과 CSS 표준의 공동 책임자인 W3C는 명확하고 표상적인 마크업을 위하여 CSS의 사용을 권장한다.[1]</blockquote></p>
+
+<!--li/ol/ul 태그-->
+    <ol>
+        <li>Naver</li>
+        <li>Daum</li>
+    </ol>
+    <ul>
+        <li>Google</li>
+        <li>Apple</li>
+    </ul>
+
+<!--a태그/target태그-->
+    <a href="https://www.naver.com">Naver</a>
+    <a href="https://www.naver.com" target="_blank">Naver target 쓴 것</a>
+
+<!--활용 + div, id, #의 활용-->
+    <ul>
+        <li><a href="#first">1</a></li>
+        <li><a href="#second">2</a></li>
+        <li><a href="#third">3</a></li>
+
+    </ul>
+
+    <div id="first">1본문</div>
+    <div id="second">2본문</div>
+    <div id="third">3본문</div>
+
+    <a href="#top">맨 위로 가기</a>
+
+<!--이미지img src 주소 alt 주소가 작동하지 않을 때의 대체 이미지/멀티미디어 태그-->
+    <img src="./QRCodeImg.jpg" alt="QRCODE">
+<!--src alt width height title loading 등의 속성이 존재-->
+
+<!--멀티미디어 태그-->
+    <!--video tag-->
+        <video src=""></video>
+    <!--video tag / width height / controls(컨트롤러"재생 멈춤 위치 등 표시") autoplay loop poster mute 등의 속성 존재-->
+    <!--audio tag = video tag-->
+
+<!--div와 span 태그-->
+    <!--div는 블록태그, span은 인라인태그-->
+    <div>
+        <h2>Title 2, div tag usage</h2>
+        <p>This is <span>an example</span> of using div tag. As long as you use this tag, the content does not change at all.</p>
+    </div>
+    <!--css와 js와 함께 동작. class와 id를 활용하여 사용-->
+    <div id="block">
+        <h2 class="title">Title 2, div tag usage</h2>
+        <p>This is <span class="title bold">an example</span> of using div tag. As long as you use this tag, the content does not change at all.</p>
+    </div>
+    <!--class는 다른 태그에 중복적으로 사용 가능-->
+    <!--class는 하나의 태그에 여러개의 클래스를 지정 가능-->
+    <!--id는 하나씩만 사용가능-->
+
+<!--form과 input태그-->
+    <!--form은 사용자의 입력을 받아 데이터를 웹서버로 전송할 때 사용하는 태그-->
+    <form>
+        <input type="text" placeholder="이름을 입력하세요">
+        <!--input type이 많이 있는데 이는 MDN 사이트에서 확인 가능-->
+    </form>
+
+    <form>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="password">
+        <input type="submit" value="Submit">
+    </form>
+    <!--버튼의 경우 button/submit/reset의 타입에 따라 기능이 다름-->
+        <button type="Submit">Submit Button</button>
+
+    <!--label은 사용자 인터페이스 화면에 이름과 연결 기능을 부여-->
+    <label for="name">이름</label>
+    <input type="text" id="name" placeholder="Name">
+    <!--radio버튼과 checkbox버튼-->
+    <label for="male">남성</label>
+    <input type="radio" id="male" name="gender">
+    <lebel for="female">여성</lebel>
+    <input type="radio" name="gender">
+    <label for="korean">국어</label>
+    <input type="checkbox" id="korean" name="과목">
+    <lebel for="english">영어</lebel>
+    <input type="checkbox" name="과목">
+
+    <!--form을 서버로 전송하는 방법-->
+    <!--form태그에 action과 method속성을 사용-->
+    <!--get과 post를 사용함-->
+    <form action="abc.com" method="post"></form>
+    
+    Git을 이제 활용하기
+
+</body>
+
+</html>
